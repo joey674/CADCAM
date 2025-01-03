@@ -20,9 +20,9 @@
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-opener": "^2",
     "@types/three": "^0.171.0",
+    "mxdraw": "^0.1.311",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "three": "^0.172.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2",

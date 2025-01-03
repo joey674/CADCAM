@@ -14,11 +14,21 @@
   color: #0f0f0f;
   background-color: #f6f6f6;
 
+  overflow: hidden;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  margin: 0;
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .logo {
@@ -106,48 +116,9 @@ button {
   }
 }
 
-.mouse-position {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  font-family: inherit;
-}
-
-/* 自定义大十字光标容器 */
-.custom-cursor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px; /* 十字线总大小 */
-  height: 100px; /* 十字线总大小 */
-  pointer-events: none; /* 允许鼠标事件穿透 */
-  transform: translate(-50%, -50%); /* 确保光标中心对齐鼠标位置 */
-  z-index: 9999; /* 确保光标在最上层 */
-}
-
-.custom-cursor::before,
-.custom-cursor::after {
-  content: "";
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.8); /* 白色半透明 */
-}
-
-.custom-cursor::before {
-  top: 50%;
-  left: 0;
-  width: 100%; /* 横线长度 */
-  height: 2px; /* 线条厚度 */
-  transform: translateY(-50%);
-}
-
-.custom-cursor::after {
-  top: 0;
-  left: 50%;
-  width: 2px; /* 线条厚度 */
-  height: 100%; /* 纵线长度 */
-  transform: translateX(-50%);
+.mxdiv {
+  width: 100%;
+  position: relative;
+  padding-top: 0;
+  height: 100vh;
 }
