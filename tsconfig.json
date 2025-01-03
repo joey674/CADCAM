@@ -14,10 +14,12 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* 关闭未使用变量提醒 */
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src"],

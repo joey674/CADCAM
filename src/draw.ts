@@ -1,10 +1,9 @@
-import * as THREE from "three";
-import { globals } from "./globals";
+// import * as THREE from "three";
+// import { globals } from "./globals";
 import { Line, Circle } from "./geometry";
 
 export const test = async () => {
   console.log("test");
-
   /*   const points = [];
   points.push(new THREE.Vector3(10, 10, 0));
   points.push(new THREE.Vector3(-10, 10, 0));
@@ -27,14 +26,14 @@ export const drawLine = async () => {
   await line.show();
 };
 
-export const drawPolyLine = async () => {};
-
-export const drawAnyLine = async () => {};
-
 export const drawCircle = async () => {
   const circle = new Circle();
   await circle.draw();
   await circle.show();
 };
+
+export const drawPolyLine = async () => {};
+
+export const drawAnyLine = async () => {};
 
 export const drawEllipse = async () => {};

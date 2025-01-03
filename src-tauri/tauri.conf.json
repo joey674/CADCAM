@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "cadcam-ts",
+  "productName": "cadcam",
   "version": "0.1.0",
-  "identifier": "com.cadcam-ts.app",
+  "identifier": "com.cadcam.app",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "cadcam-ts",
+        "title": "cadcam",
         "width": 800,
         "height": 600
       }

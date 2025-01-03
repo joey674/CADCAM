@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    cadcam_ts_lib::run()
+    cadcam_lib::run()
 }
