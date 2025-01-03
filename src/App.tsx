@@ -13,6 +13,19 @@ function App() {
       },
     });
 
+    /* add axis */
+    const setAxis= () => {
+      let axis = new Mx.MxDbLine();
+      axis.pt1 = new THREE.Vector3(-100, 0, 0);
+      axis.pt2 = new THREE.Vector3(100, 0, 0);
+      Mx.MxFun.getCurrentDraw().addMxEntity(axis);
+      axis = new Mx.MxDbLine();
+      axis.pt1 = new THREE.Vector3(0, -100, 0);
+      axis.pt2 = new THREE.Vector3(0, 100, 0);
+      Mx.MxFun.getCurrentDraw().addMxEntity(axis);
+    }
+    setAxis();
+
     /* add command hint */
     Mx.MxFun.addCommand("drawLine", () => {
       if (Mx.MxFun.isRunningCommand()) {
@@ -27,10 +40,12 @@ function App() {
       drawCircle()
     })
     Mx.MxFun.listenForCommandLineInput(({ msCmdTip, msCmdDisplay, msCmdText }) => {
-      console.log(msCmdTip, msCmdDisplay, msCmdText)
+      // console.log(msCmdTip, msCmdDisplay, msCmdText)
       document.getElementById('mxCmdArea')!.innerHTML = msCmdTip;
       document.getElementById("mxCmdArea")!.scrollTop = document.getElementById("mxCmdArea")!.scrollHeight;
     })
+
+
 
   }, []);
 
@@ -60,9 +75,9 @@ function App() {
           id="mxCmdArea"
           rows={5}
           style={{ width: "100%", overflow: "scroll" }}
-          placeholder="command:"
+          placeholder="command..."
           readOnly 
-        > command</textarea>
+        > command </textarea>
         <input type="text" id="mxCmdText" />
       </div>
     </div>
